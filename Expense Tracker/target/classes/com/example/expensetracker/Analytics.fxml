@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.expensetracker.controllers.AnalyticsController">
+    <left>
+        <AnchorPane prefHeight="570.0" prefWidth="704.0" style="-fx-background-color: #B0D9B1;" BorderPane.alignment="CENTER">
+            <children>
+                <BarChart fx:id="barChart" layoutX="3.0" layoutY="233.0" prefHeight="407.0" prefWidth="677.0">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BarChart>
+                <ChoiceBox fx:id="catList" layoutX="380.0" layoutY="101.0" prefHeight="41.0" prefWidth="268.0" />
+            <Button layoutX="65.0" layoutY="19.0" mnemonicParsing="false" onAction="#redirectBack" opacity="0.77" prefHeight="39.0" prefWidth="136.0" style="-fx-background-color: #79AC78;" text="  Back" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="30.0" layoutX="70.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back-icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="116.0" layoutY="100.0" text="Select Category">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="171.0" text="Bargraph" underline="true">
+               <font>
+                  <Font name="Century Gothic Bold" size="43.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="683.0" prefWidth="574.0" style="-fx-background-color: #B0D9B1;" BorderPane.alignment="CENTER">
+            <children>
+                <PieChart fx:id="YearChart" layoutX="54.0" layoutY="304.0" prefHeight="389.0" prefWidth="500.0" />
+                <PieChart fx:id="MonthChart" layoutX="54.0" layoutY="304.0" prefHeight="389.0" prefWidth="509.0" />
+                <PieChart fx:id="WeekChart" layoutX="53.0" layoutY="304.0" prefHeight="389.0" prefWidth="500.0" />
+                <Button fx:id="YearlyBtn" layoutX="105.0" layoutY="233.0" mnemonicParsing="false" onAction="#yearlyBtnClicked" style="-fx-background-color: grey; -fx-border-color: white;" text="Yearly" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+                <Button fx:id="MonthlyBtn" layoutX="249.0" layoutY="236.0" mnemonicParsing="false" onAction="#monthlyBtnClicked" style="-fx-background-color: #79AC78;" text="Monthly" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+                <Button fx:id="weeklyBtn" layoutX="402.0" layoutY="232.0" mnemonicParsing="false" onAction="#weeklyBtnClicked" style="-fx-background-color: grey; -fx-border-color: white;" text="Weekly" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Separator layoutX="-3.0" layoutY="7.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="0.0" style="-fx-background-color: green;" />
+            <Label layoutX="135.0" layoutY="150.0" text="Choose Piechart Type" underline="true">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="42.0" prefHeight="83.0" prefWidth="426.0" style="-fx-background-color: #618264;" text="   Analyse Your Expense!" textFill="#9dffa4">
+               <font>
+                  <Font name="Century Gothic Bold" size="33.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

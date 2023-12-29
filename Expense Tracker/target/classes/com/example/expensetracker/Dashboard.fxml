@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.expensetracker.controllers.DashboardController">
+   <children>
+      <Separator layoutX="232.0" orientation="VERTICAL" prefHeight="708.0" prefWidth="5.0" style="-fx-background-color: green;" />
+      <Separator layoutX="1046.0" orientation="VERTICAL" prefHeight="706.0" prefWidth="5.0" style="-fx-background-color: green;" />
+      <Text layoutX="1074.0" layoutY="463.0" smooth="false" stroke="#385865" text="Yearly" wrappingWidth="136.9116072356701">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font></Text>
+      <Text layoutX="1069.0" layoutY="503.0" stroke="#385865" text="This month" wrappingWidth="146.99997782707214">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font></Text>
+      <Text layoutX="1072.0" layoutY="548.0" stroke="#385865a8" text="Today">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font></Text>
+      <Text fill="#27374d" layoutX="1067.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montly Income    ">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="1151.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button layoutX="31.0" layoutY="153.0" mnemonicParsing="false" onAction="#redirectGroup" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: #79AC78;" text="Add group" textFill="#fcf7f7">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Text fill="#27374d" layoutX="1065.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balcance Amount">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></Text>
+      <Button layoutX="32.0" layoutY="615.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="183.0" style="-fx-background-color: #79AC78; -fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" text="Customer Support" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="23.0" mnemonicParsing="false" onAction="#logout" opacity="0.77" prefHeight="39.0" prefWidth="136.0" style="-fx-background-color: #79AC78;" text="    Logout" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.5119598507881165" green="1.0" blue="0.46759259700775146" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="35.0" fitWidth="30.0" layoutX="31.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/back-icon.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableGroup" layoutX="24.0" layoutY="212.0" prefHeight="245.0" prefWidth="191.0" style="-fx-background-color: #B0D9B1;" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="newgroup" prefWidth="203.0" text="Groups" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="1092.0" layoutY="33.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #79AC78;" text="Wallet" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="1078.0" layoutY="377.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="159.0" style="-fx-background-color: #79AC78;" text="Expenditure" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="a2" layoutX="235.0" layoutY="-2.0" prefHeight="700.0" prefWidth="816.0">
+         <children>
+            <TextField fx:id="amount" layoutX="207.0" layoutY="94.0" prefHeight="39.0" prefWidth="379.0" promptText="Enter Amount" style="-fx-border-color: green;">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </TextField>
+            <Text fill="#618264" layoutX="95.0" layoutY="61.0" smooth="false" stroke="#526d8200" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="5.0" style="-fx-background-color: lightorange;" text="Dashboard" wrappingWidth="147.4814437329769">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="E_RESIZE" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </Text>
+            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="627.0" layoutY="48.0" mnemonicParsing="false" onAction="#createTransaction" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #79AC78;" text="Add Expense" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#618264" layoutX="27.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Expenses" wrappingWidth="677.31884765625">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <MenuButton fx:id="cateParent" layoutX="208.0" layoutY="160.0" mnemonicParsing="false" style="-fx-background-color: #79AC78;" text="Category" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#setSchool" text="School" />
+                <MenuItem mnemonicParsing="false" onAction="#setFood" text="Food" />
+                  <MenuItem mnemonicParsing="false" onAction="#setGrocery" text="Grocery" />
+                  <MenuItem mnemonicParsing="false" onAction="#setShopping" text="Shopping" />
+                  <MenuItem mnemonicParsing="false" onAction="#setOther" text="Other" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+            <TableView fx:id="expenseTable" layoutX="28.0" layoutY="310.0" prefHeight="363.0" prefWidth="733.0" style="-fx-background-color: #B0D9B1;">
+              <columns>
+                  <TableColumn fx:id="ColumnType" prefWidth="112.33334350585938" text="Type" />
+                  <TableColumn fx:id="ColumnCategory" prefWidth="121.66665649414062" text="Category" />
+                  <TableColumn fx:id="ColumnReceiver" prefWidth="122.0" text="Receiver" />
+                  <TableColumn fx:id="ColumnAmount" prefWidth="119.33331298828125" text="Amount" />
+                  <TableColumn fx:id="ColumnDescription" prefWidth="116.33331298828125" text="Description" />
+                  <TableColumn fx:id="ColumnDate" prefWidth="143.0" text="Date" />
+              </columns>
+            </TableView>
+            <Label fx:id="name" layoutX="287.0" layoutY="5.0" text="Label" textFill="#39513b">
+               <font>
+                  <Font name="Century Gothic Bold" size="28.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="0.37" />
+               </effect>
+            </Label>
+            <Label layoutX="416.0" layoutY="173.0" prefHeight="34.0" prefWidth="78.0" text="Receiver" textFill="#618264">
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelMessage" focusTraversable="false" layoutX="215.0" layoutY="11.0" prefHeight="53.0" prefWidth="385.0" style="-fx-background-color: white;" text="   Registration Successfull!" textAlignment="CENTER" textFill="#009a12" visible="false">
+               <font>
+                  <Font name="Century Gothic Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="cross" fitHeight="46.0" fitWidth="47.0" layoutX="546.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/cross-mark.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tick" fitHeight="49.0" fitWidth="43.0" layoutX="545.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/accept.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="description" layoutX="531.0" layoutY="229.0" prefHeight="35.0" prefWidth="230.0" promptText="Enter description" style="-fx-border-color: green;" />
+            <Label layoutX="407.0" layoutY="230.0" prefHeight="34.0" prefWidth="96.0" text="Description" textFill="#618264">
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="48.0" layoutX="36.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/money.png" />
+               </image>
+            </ImageView>
+            <ChoiceBox fx:id="receiverChoice" layoutX="530.0" layoutY="175.0" prefHeight="27.0" prefWidth="227.0" style="-fx-background-color: #B0D9B1; -fx-border-color: green;" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="income" layoutX="1188.0" layoutY="98.0" prefHeight="34.0" prefWidth="86.0" text="Label">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="balance" layoutX="1207.0" layoutY="156.0" text="Label">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="yearly" layoutX="1176.0" layoutY="446.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="monthly" layoutX="1177.0" layoutY="488.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="weekly" layoutX="1180.0" layoutY="532.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="135.0" fitWidth="133.0" layoutX="1096.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/2454542.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="36.0" layoutY="540.0" mnemonicParsing="false" onAction="#redirectAnalytics" prefHeight="46.0" prefWidth="159.0" style="-fx-background-color: #79AC78; -fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" text="View Analytics" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
